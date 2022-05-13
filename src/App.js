@@ -6,7 +6,6 @@ import Header from './Pages/Shared/Header/Header';
 function App() {
   return (
     <div>
-      <h2 className="text-3xl font-bold underline">Hello React</h2>
       <Header></Header>
       <Routes>
         {/* <Route path="/" element={} />
