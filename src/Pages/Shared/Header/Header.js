@@ -1,6 +1,6 @@
 import React from 'react';
-import Home from '../../Home/Home';
 import menuIcon from '../../../Images/menu-icon.png'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -27,50 +27,49 @@ const Header = () => {
                     >
                         <ul className="flex flex-col lg:flex-row list-none lg:mx-auto lg:px-16">
                         <li className="nav-item ">
-                            <a
+                            <Link
                             className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                            href="#pablo"
+                            to="/"
                             >
                             <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Home</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a
+                            <Link
                             className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                            href="#pablo"
+                            to="/manageInventory"
                             >
                             <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Manage Inventory</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a
+                            <Link
                             className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                            href="#pablo"
+                            to="/addNewItem"
                             >
-                            <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Add new Item</span>
-                            </a>
+                            <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Add New Item</span>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a
+                            <Link
                             className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                            href="#pablo"
+                            to="/blogs"
                             >
                             <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Blogs</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a
+                            <Link
                             className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                            href="#pablo"
+                            to="/login"
                             >
                             <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span className="ml-2">Login</span>
-                            </a>
+                            </Link>
                         </li>
                         </ul>
                     </div>
                     </div>
-                </nav>
-            <Home></Home>
+            </nav>
         </div>
     );
 };

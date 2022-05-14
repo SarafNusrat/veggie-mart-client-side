@@ -1,15 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ManageInventory = () => {
+const Blogs = () => {
     return (
         <div>
             <Helmet>
-                <title>Manage Inventory - Veggie Mart</title>
+                <title>Blogs - Veggie Mart</title>
             </Helmet>
-            <h2>Manage yor inventory</h2>
+            <h2>this is blog</h2>
         </div>
     );
 };
 
-export default ManageInventory;
+export default Blogs;
