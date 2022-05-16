@@ -1,0 +1,101 @@
+[
+    {
+      "id": 1,
+      "name": "EGG PLANT",
+      "img": "itemsImages/items/Begun.png",
+      "description": "Egg plant are mildly sweet, moist and never bitter. Because of their small size, the silky flesh will cook quickly.",
+      "price": "39 TAKA",
+      "quantity": "500 GM",
+      "supplier": "KAZI FARM"
+    },
+    {
+      "id": 2,
+      "name": "BROCOLLI",
+      "img": "itemsImages/items/Brocolli.png",
+      "description": "Brocolli are naturally low in calories, carbohydrates, sodium, fat and cholesterol & hydrating properties.",
+      "price": "25 TAKA",
+      "quantity": "500 GM",
+      "supplier": "UNIMART"
+    },
+    {
+      "id": 3,
+      "name": "CAPSICUM",
+      "img": "itemsImages/items/Capcicum.png",
+      "description": "A fresh, crisp green capsicum is a tasty vegetable that can be a regular part of your healthy eating plan.",
+      "price": "129 TAKA",
+      "quantity": "300 GM",
+      "supplier": "FARMERS AGRO"
+    },
+    {
+      "id": 4,
+      "name": "CARROT",
+      "img": "itemsImages/items/carrot.png",
+      "description": " Carrots are an excellent source of vitamin a and they help promote heart, eye, brain, skin and liver health.",
+      "price": "49 TAKA",
+      "quantity": "500 GM",
+      "supplier": "KAZI FARM"
+    },
+    {
+      "id": 5,
+      "name": "TOMATO",
+      "img": "itemsImages/items/Tomato.png",
+      "description": "The tomato is consumed in diverse ways, including raw, as an ingredient in many dishes, sauces, salads, and drinks.",
+      "price": "35 TAKA",
+      "quantity": "500 GM",
+      "supplier": "VEG ASIA"
+    },
+    {
+      "id": 6,
+      "name": "KACHKOLA",
+      "img": "itemsImages/items/Kachkola.png",
+      "description": "Nutritionally, the green banana is a good source of fiber, vitamins and minerals, and contains a starch that controls blood sugar.",
+      "price": "39 TAKA",
+      "quantity": "1 KG",
+      "supplier": "UNIMART"
+    },
+    {
+      "id": 7,
+      "name": "CAULIFLOWER",
+      "img": "itemsImages/items/cauliflower.png",
+      "description": "Cauliflower is high in vitamin B-6, with a 1-cup boiled serving containing 39 percent of your daily value.",
+      "price": "40 TAKA",
+      "quantity": "500 GM",
+      "supplier": "FARMERS AGRO"
+    },
+    {
+      "id": 8,
+      "name": "POTATO",
+      "img": "itemsImages/items/Potato.png",
+      "description": "Buy regular potato from us which provides you with dietary fiber, potassium, vitamins, etc.",
+      "price": "25 TAKA",
+      "quantity": "1 KG",
+      "supplier": "KAZI FARM"
+    },
+    {
+      "id": 9,
+      "name": "PINEAPPLE",
+      "img": "itemsImages/items/pineapple.png",
+      "description": "Fresh pineapples contain 50 calories per 100 grams, which amounts to only 83 calories per cup (165 grams).",
+      "price": "59 TAKA",
+      "quantity": "1 KG",
+      "supplier": "VEG ASIA"
+    },
+    {
+      "id": 10,
+      "name": "RED CHILLI",
+      "img": "itemsImages/items/red chilli.png",
+      "description": "The heat of chilies is stored mostly in the seeds and membranes, so remove these to remove the heat.",
+      "price": "29 TAKA",
+      "quantity": "250 GM",
+      "supplier": "AAGORA"
+    },
+    {
+      "id": 11,
+      "name": "PARSLEY",
+      "img": "itemsImages/items/parsley.png",
+      "description": "Locally sourced. With its sweet, bright aroma, fresh parsley is used a lot in cooking and good for body fitness.",
+      "price": "19 TAKA",
+      "quantity": "100 GM",
+      "supplier": "AAGORA"
+    }
+]
