@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import useItems from '../../hooks/useItems';
 
 const ItemDetail = () => {
     const { id } = useParams();

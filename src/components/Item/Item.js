@@ -1,5 +1,7 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 import './Item.css';
 
 const Item = (props) => {
@@ -8,8 +10,7 @@ const Item = (props) => {
     const navigate = useNavigate();
 
     const showItemDetail = (id) => {
-        console.log(id);
-        navigate(`/inventory/${id}`);
+            navigate(`/inventory/${id}`)
     }
 
     return (

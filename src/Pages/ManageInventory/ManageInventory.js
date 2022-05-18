@@ -16,8 +16,8 @@ const ManageInventory = () => {
             <Helmet>
                 <title>Manage Inventory - Veggie Mart</title>
             </Helmet>
-            <div class="relative h-30 w-auto">
-                <button onClick={handleAddNewItem} type="button" class="absolute top-0 right-2 h-12 w-38 px-6 py-2.5 bg-green-600 text-white text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-500 hover:shadow-lg active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out animate-bounce bg-grey-light text-grey-darkest font-bold inline-flex items-center">+ ADD NEW ITEM</button>
+            <div className="relative h-30 w-auto">
+                <button onClick={handleAddNewItem} type="button" className="absolute top-0 right-2 h-12 w-38 px-6 py-2.5 bg-green-600 text-white text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-500 hover:shadow-lg active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out animate-bounce bg-grey-light text-grey-darkest font-bold inline-flex items-center">+ ADD NEW ITEM</button>
             </div>
 
             <h4 className="font-bold text-center sm:text-5xl text-3xl mt-6 pt-6 mb-2 text-orange-600">VE<span className="italic">GG</span>IE MART</h4>

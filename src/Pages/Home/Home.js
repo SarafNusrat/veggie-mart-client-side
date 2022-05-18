@@ -65,12 +65,9 @@ const Home = () => {
                     <h4 className="font-bold text-center sm:text-5xl text-3xl mt-1 pt-6 mb-2 text-orange-600">INVENTORY ITEMS</h4>
                 </div>
                 <HomeItems></HomeItems>
-                {/* <button class="text-pink-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button"
-                >
-                    With Text
-                </button> */}
-                <div class="relative mt-8 h-30 w-auto">
-                    <button onClick={handleManageInventoriesBtn} type="button" class="absolute top-0 right-8 ml-4 h-12 w-38 px-6 py-2.5 text-green-600 text-1xl underline leading-tight uppercase rounded hover:bg-yellow-500 hover:shadow-lg active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out animate-bounce bg-grey-light text-grey-darkest font-bold inline-flex items-center">MANAGE INVENTORIES</button>
+               
+                <div className="relative mt-8 h-30 w-auto">
+                    <button onClick={handleManageInventoriesBtn} type="button" className="absolute top-0 right-8 ml-4 h-12 w-38 px-6 py-2.5 text-green-600 text-1xl underline leading-tight uppercase rounded hover:bg-yellow-500 hover:shadow-lg active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out animate-bounce bg-grey-light text-grey-darkest font-bold inline-flex items-center">MANAGE INVENTORIES</button>
                 </div>
             </div>
 

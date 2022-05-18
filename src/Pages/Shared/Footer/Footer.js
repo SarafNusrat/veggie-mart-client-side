@@ -2,16 +2,16 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer class="mt-12 justify-items-center bottom-0 text-white">
-            <div class="container justify-items-center pt-9">
-                <div class="flex justify-center mb-9">
-                <a href="https://www.facebook.com/Veggie-Mart-100161649315199" class="mr-9 text-gray-800">
+        <footer className="mt-12 justify-items-center bottom-0 text-white">
+            <div className="container justify-items-center pt-9">
+                <div className="flex justify-center mb-9">
+                <a href="https://www.facebook.com/Veggie-Mart-100161649315199" className="mr-9 text-gray-800">
                     <svg
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
                     data-icon="facebook-f"
-                    class="svg-inline--fa fa-facebook-f w-2.5"
+                    className="svg-inline--fa fa-facebook-f w-2.5"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 320 512"
@@ -22,13 +22,13 @@ const Footer = () => {
                     ></path>
                     </svg>
                 </a>
-                <a href="https://twitter.com/" class="mr-9 text-gray-800">
+                <a href="https://twitter.com/" className="mr-9 text-gray-800">
                     <svg
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
                     data-icon="twitter"
-                    class="svg-inline--fa fa-twitter w-4"
+                    className="svg-inline--fa fa-twitter w-4"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -39,13 +39,13 @@ const Footer = () => {
                     ></path>
                     </svg>
                 </a>
-                <a href="https://www.google.com/search?q=veggie+mart&source=lmns&hl=en&sa=X&ved=2ahUKEwiumb_Qitr3AhW8gGMGHcXpCwEQ_AUoAHoECAEQAA" class="mr-9 text-gray-800">
+                <a href="https://www.google.com/search?q=veggie+mart&source=lmns&hl=en&sa=X&ved=2ahUKEwiumb_Qitr3AhW8gGMGHcXpCwEQ_AUoAHoECAEQAA" className="mr-9 text-gray-800">
                     <svg
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
                     data-icon="google"
-                    class="svg-inline--fa fa-google w-3.5"
+                    className="svg-inline--fa fa-google w-3.5"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 488 512"
@@ -56,13 +56,13 @@ const Footer = () => {
                     ></path>
                     </svg>
                 </a>
-                <a href="https://www.instagram.com/veggiemarts/?hl=en" class="mr-9 text-gray-800">
+                <a href="https://www.instagram.com/veggiemarts/?hl=en" className="mr-9 text-gray-800">
                     <svg
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
                     data-icon="instagram"
-                    class="svg-inline--fa fa-instagram w-3.5"
+                    className="svg-inline--fa fa-instagram w-3.5"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
@@ -73,13 +73,13 @@ const Footer = () => {
                     ></path>
                     </svg>
                 </a>
-                <a href="https://www.linkedin.com/search/results/all/?keywords=veggie%20mart%20&origin=GLOBAL_SEARCH_HEADER&sid=Qx5" class="mr-9 text-gray-800">
+                <a href="https://www.linkedin.com/search/results/all/?keywords=veggie%20mart%20&origin=GLOBAL_SEARCH_HEADER&sid=Qx5" className="mr-9 text-gray-800">
                     <svg
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
                     data-icon="linkedin-in"
-                    class="svg-inline--fa fa-linkedin-in w-3.5"
+                    className="svg-inline--fa fa-linkedin-in w-3.5"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
@@ -90,13 +90,13 @@ const Footer = () => {
                     ></path>
                     </svg>
                 </a>
-                <a href="https://github.com/" class="text-gray-800">
+                <a href="https://github.com/" className="text-gray-800">
                     <svg
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
                     data-icon="github"
-                    class="svg-inline--fa fa-github w-4"
+                    className="svg-inline--fa fa-github w-4"
                     role="img"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 496 512"
@@ -110,9 +110,9 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div class="text-center text-gray-700 p-4">
+            <div className="text-center text-gray-700 p-4">
                 © 2022 Copyright:
-                <a class="text-gray-800" href="https://www.facebook.com/Veggie-Mart-100161649315199">Veggie Mart</a>
+                <a className="text-gray-800" href="https://www.facebook.com/Veggie-Mart-100161649315199">Veggie Mart</a>
             </div>
         </footer>
     );
