@@ -23,7 +23,7 @@ const Item = (props) => {
                             <h2 className="card-title text-orange-600 font-bold">{name}</h2>
                             <p className='text-gray-500'>{description}</p>
                             <p className='text-orange-500 font-bold pb-0.25'>{price}</p>
-                            <span className='text-gray-700'>[{quantity}]</span>
+                            <span className='text-gray-500 font-bold'>QUANTITY(IN KG): {quantity}</span>
                             <h4 className='text-green-800 font-bold'>{supplier}</h4>
                             <div className="card-actions">
                                 <button onClick={() => showItemDetail(_id)}className="btn btn-warning">Update</button>
