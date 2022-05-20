@@ -4,8 +4,33 @@ import vegBasket from '../../Images/Veg Basket.png'
 import { useForm } from "react-hook-form";
 
 const AddNewItem = () => {
-    const { addService, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    
+    const handleAddItem = (event) => {
+          event.preventDefault();
+          const name = event.target.name.value;
+          const img = event.target.img.value;
+          const description = event.target.description.value;
+          const price = event.target.price.value;
+          const quantity = event.target.quantity.value;
+          const supplier = event.target.supplier.value;
+
+          const item = {name, img, description, price, quantity, supplier};
+
+          // post data to server 
+          fetch('http://localhost:5000/item', {
+              method: 'POST', 
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(item),
+          })
+          .then(res => res.json())
+          .then(data => {
+              alert('New item added successfully!!');
+              event.target.reset();
+          })
+    }
+
     return (
         <div>
             <Helmet>
@@ -19,7 +44,8 @@ const AddNewItem = () => {
                 <div>
                     <img className=" align-middle w-full mt-24 mr-2" src={vegBasket} alt="" />
                 </div>
-
+                <form onSubmit={handleAddItem}>
+                    
                 <div className="hero min-h-screen bg-base-100 hero-content flex-col lg:flex-row-reverse">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">
@@ -28,50 +54,53 @@ const AddNewItem = () => {
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" placeholder="Enter a valid name" className="input input-bordered" />
+                                <input type="text" name="name" placeholder="Enter a valid name" className="input input-bordered" required/>
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Image</span>
                                 </label>
-                                <input type="text" placeholder="please enter an image url" className="input input-bordered" />
+                                <input type="text" name="img" placeholder="please enter an image url" className="input input-bordered" required/>
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Description</span>
                                 </label>
-                                <input type="text" placeholder="Enter a short description for the product" className="input input-bordered" />
+                                <input type="text" name="description" placeholder="Enter a short description for the product" className="input input-bordered" required/>
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Price</span>
                                 </label>
-                                <input type="text" placeholder="Enter price per kg" className="input input-bordered" />
+                                <input type="text" name="price" placeholder="Enter price per kg" className="input input-bordered" required/>
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Quantity</span>
                                 </label>
-                                <input type="text" placeholder="Enter quantity in kg" className="input input-bordered" />
+                                <input type="text" name="quantity" placeholder="Enter quantity in kg" className="input input-bordered" required/>
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Supplier</span>
                                 </label>
-                                <input type="text" placeholder="Enter supplier name" className="input input-bordered" />
+                                <input type="text"  name="supplier" placeholder="Enter supplier name" className="input input-bordered" required/>
                             </div>
 
                             <div className="form-control mt-6">
-                                <button className="btn btn-warning">Submit</button>
+                                <button className="btn btn-warning">Add Item</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                 
+                </form>
+
             </div> 
         </div>
     );

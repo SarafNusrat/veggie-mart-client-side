@@ -6,9 +6,6 @@ const ItemDetail = () => {
     const { id } = useParams();
 
     const [details, setDetails] = useState({});
-    // let newQuantity; 
-    // newQuantity = details.quantity;
-    // console.log(newQuantity);
 
     useEffect(() => {
         const url = `http://localhost:5000/item/${id}`
