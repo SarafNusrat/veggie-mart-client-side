@@ -1,12 +1,24 @@
 import React from 'react';
 
 const ManageInventoryItem = (props) => {
-    const { name, img, description, price, quantity, supplier } = props.manageInventoryItem;
+    const { _id, name, img, description, price, quantity, supplier} = props.manageInventoryItem;
+    const reload = props.reload;
+    const setIsReload = props.setIsReload;
 
-    const handleDeleteBtn= () => {
-        
+    const handleDeleteBtn= _id => {
+        console.log(reload);
+        const proceed = window.confirm('Are you sure you want to delete?');
+        if (proceed) {
+            const url = `http://localhost:5000/item/${_id}`
+        fetch(url, {
+              method: 'DELETE', 
+          })
+          .then(res => res.json())
+          .then(data => setIsReload(!reload)  
+          )
    }
-
+    }
+ 
     return (
         <div>
         <div className="pt-1 mx-auto ml-6 h-auto card w-96 bg-base-100 shadow-xl">
@@ -20,7 +32,7 @@ const ManageInventoryItem = (props) => {
                         <span className='text-gray-700'>[{quantity}]</span>
                         <h4 className='text-green-800 font-bold'>{supplier}</h4>
                         <div className="card-actions">
-                            <button onClick={handleDeleteBtn} className="btn btn-warning">Delete</button>
+                            <button onClick={() => handleDeleteBtn(_id)} className="btn btn-warning">Delete</button>
                         </div>
                     </div>
         </div>

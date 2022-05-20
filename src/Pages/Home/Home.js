@@ -18,15 +18,17 @@ const Home = () => {
     return (
         <div>
             {/* Banner */}
-            <div className="rounded grid grid-cols-1 sm:grid-cols-2 gap-2 border-l-4 border-orange-200 ml-8">
-                <div className="px-1 ml-8 mt-12">
-                    <h4 className="font-bold text-center sm:text-6xl text-4xl mt-16 pt-16 mb-2 text-orange-600">VE<span className="italic">GG</span>IE MART</h4>
-                    <p className="text-center sm:text-5xl text-3xl mb-2 mt-4 text-black-100">The Inventory</p>
+        
+                <div className="rounded grid grid-cols-1 sm:grid-cols-2 gap-2 border-l-4 border-orange-200 ml-8">
+                    <div className="px-1 ml-8 mt-12">
+                        <h4 className="font-bold text-center sm:text-6xl text-4xl mt-16 pt-16 mb-2 text-orange-600">VE<span className="italic">GG</span>IE MART</h4>
+                        <p className="text-center sm:text-5xl text-3xl mb-2 mt-4 text-black-100">The Inventory</p>
+                    </div>
+                    <div>
+                        <img className="w-full mr-2" src={bannerImage} alt="" />
+                    </div>
                 </div>
-                <div>
-                    <img className="w-full mr-2" src={bannerImage} alt="" />
-                </div>
-            </div>
+
 
             {/* Extra section 1 */}
             <div className="grid grid-cols-1 sm:grid-cols-3 justify-items-center mx-40 mt-8 mb-12 gap-3">
@@ -65,7 +67,6 @@ const Home = () => {
                     <h4 className="font-bold text-center sm:text-5xl text-3xl mt-1 pt-6 mb-2 text-orange-600">INVENTORY ITEMS</h4>
                 </div>
                 <HomeItems></HomeItems>
-               
                 <div className="relative mt-8 h-30 w-auto">
                     <button onClick={handleManageInventoriesBtn} type="button" className="absolute top-0 right-8 ml-4 h-12 w-38 px-6 py-2.5 text-green-600 text-1xl underline leading-tight uppercase rounded hover:bg-yellow-500 hover:shadow-lg active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out animate-bounce bg-grey-light text-grey-darkest font-bold inline-flex items-center">MANAGE INVENTORIES</button>
                 </div>
