@@ -84,8 +84,20 @@ const Header = () => {
                             </li>
                             <li className="nav-item">
                             {
+                                 user && 
+                                 <Link
+                                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                                    to="/myItems"
+                                >
+                                    <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span className="ml-2">My Items</span>
+                                </Link>
+                            }
+                                
+                            </li>
+                            <li className="nav-item">
+                            {
                                 user ?
-                                <button className='fab fa-twitter ml-4 px-4 align-middle text-1xl text-black-100 font-semibold bg-white border-white opacity-75' onClick={handleSignOut}>Sign Out</button>
+                                <button className='fab fa-twitter ml-4 px-4 align-middle text-1xl text-black-100 font-semibold bg-white border-white opacity-75' onClick={handleSignOut}>Log Out</button>
                                 :
                                 <Link
                                         className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"

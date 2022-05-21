@@ -1,20 +1,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import vegBasket from '../../Images/Veg Basket.png'
-import { useForm } from "react-hook-form";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const AddNewItem = () => {
+    const [user] = useAuthState(auth);
+    console.log(user);
     
     const handleAddItem = (event) => {
           event.preventDefault();
           const name = event.target.name.value;
+          const email = event.target.email.value;
           const img = event.target.img.value;
           const description = event.target.description.value;
           const price = event.target.price.value;
           const quantity = event.target.quantity.value;
           const supplier = event.target.supplier.value;
 
-          const item = {name, img, description, price, quantity, supplier};
+          const item = {name, img, email, description, price, quantity, supplier};
+          
 
           // post data to server 
           fetch('http://localhost:5000/item', {
@@ -52,7 +57,14 @@ const AddNewItem = () => {
                         <p className="text-center bg-orange-50 sm:text-4xl text-2xl mb-2 mt-4 text-orange-500">WHAT'S<span className='text-green-700'> NEW?</span></p>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Name</span>
+                                    <span className="label-text">Your Email Address</span>
+                                </label>
+                                <input type="text" name="email" placeholder="Enter your email address" className="input input-bordered" required/>
+                            </div>
+
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Item Name</span>
                                 </label>
                                 <input type="text" name="name" placeholder="Enter a valid name" className="input input-bordered" required/>
                             </div>

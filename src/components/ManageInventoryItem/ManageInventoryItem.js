@@ -6,7 +6,6 @@ const ManageInventoryItem = (props) => {
     const setIsReload = props.setIsReload;
 
     const handleDeleteBtn= _id => {
-        console.log(reload);
         const proceed = window.confirm('Are you sure you want to delete?');
         if (proceed) {
             const url = `http://localhost:5000/item/${_id}`
@@ -20,7 +19,6 @@ const ManageInventoryItem = (props) => {
     }
  
     return (
-        <div>
         <div className="pt-1 mx-auto ml-6 h-auto card w-96 bg-base-100 shadow-xl">
                     <figure className="px-10">
                         <img src={img} alt="items" className="rounded-xl" />
@@ -36,7 +34,6 @@ const ManageInventoryItem = (props) => {
                         </div>
                     </div>
         </div>
-    </div>
     );
 };
 
