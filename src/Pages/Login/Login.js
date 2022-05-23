@@ -1,5 +1,3 @@
-import { async } from '@firebase/util';
-import { sendPasswordResetEmail } from 'firebase/auth';
 import React, { useRef } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Helmet } from 'react-helmet-async';
@@ -9,8 +7,19 @@ import Loading from '../Shared/Loading/Loading';
 import GoggleLogin from './GoggleLogin';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+// import axios from 'axios';
+// import useToken from '../../hooks/useToken';
 
 const Login = () => {
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    let errorElement;
+
+    let from = location.state?.from?.pathname || "/";
+
     const [
         signInWithEmailAndPassword,
         user,
@@ -19,12 +28,8 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    // const [token] = useToken(user);
 
-    const emailRef = useRef('');
-    const passwordRef = useRef('');
-    const navigate = useNavigate();
-    const location = useLocation();
-    let errorElement;
 
     if (error) {
         errorElement = <p className='text-red-600'>Error: {error.message}</p>
@@ -34,20 +39,24 @@ const Login = () => {
         return <Loading></Loading>
     }
 
-    let from = location.state?.from?.pathname || "/";
 
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        signInWithEmailAndPassword(email, password);
-    }
+        await signInWithEmailAndPassword(email, password);
+
+        // const { data } = await axios.post('http://localhost:5000/login', { email });
+    
+        // localStorage.setItem('accessToken', data.accessToken);
+
+        // navigate(from, { replace: true });
+    } 
 
     if (user) {
         navigate(from, { replace: true });
     }
-
 
     const navigateRegister = event => {
         navigate('/register');

@@ -6,6 +6,7 @@ import { sendEmailVerification } from 'firebase/auth';
 import GoggleLogin from '../Login/GoggleLogin';
 import { Helmet } from 'react-helmet-async';
 import Loading from '../Shared/Loading/Loading';
+// import useToken from '../../hooks/useToken';
 
 const Registration = () => {
 
@@ -20,6 +21,8 @@ const Registration = () => {
     
           const emailRef = useRef('');
           const passwordRef = useRef('');
+
+        //   const [token] = useToken(user);
     
         const navigate = useNavigate();
     

@@ -27,13 +27,20 @@ function App() {
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/aboutUs" element={<AboutUs></AboutUs>}></Route>
         <Route path="/ourTeam" element={<OurTeam></OurTeam>}></Route>
-        <Route path="/myItems" element={<MyItem></MyItem>}></Route>
         <Route path="/register" element={<Registration></Registration>}></Route>
+
+        <Route path="/myItems" element={
+        <RequireAuth>
+            <MyItem></MyItem>
+        </RequireAuth>
+        }></Route>
+       
         <Route path="/inventory/:id" element={
         <RequireAuth>
             <ItemDetail></ItemDetail>
         </RequireAuth>
         }></Route>
+
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
