@@ -6,7 +6,7 @@ const ManageInventoryItems = () => {
     const [reload, setIsReload] = useState(true);
 
     useEffect( () => {
-        fetch('http://localhost:5000/item')
+        fetch('https://serene-refuge-96903.herokuapp.com/item')
         .then(res => res.json())
         .then(data => setManageInventoryItems(data));
     }, [reload]);

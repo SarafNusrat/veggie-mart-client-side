@@ -22,7 +22,7 @@ const AddNewItem = () => {
           
 
           // post data to server 
-          fetch('http://localhost:5000/item', {
+          fetch('https://serene-refuge-96903.herokuapp.com/item', {
               method: 'POST', 
               headers: {
                   'Content-Type': 'application/json',

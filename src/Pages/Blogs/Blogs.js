@@ -13,7 +13,7 @@ const Blogs = () => {
                 <div className='flex flex-col mx-auto border-blue-500 border-opacity-25 gap-2 mt-4'>
 
                     <div className='border-1 p-5 border-opacity-50 mt-4 mb-4 ml-12 mr-12 bg-orange-100'>
-                        <h2 className='font-bold text-orange-600'>1. When should you use nodejs and when should you use mongodb?</h2>
+                        <h2 className='font-bold text-orange-600'>1. When should you use nodejs and when when should you use mongodb?</h2>
                         <br></br>
                         <p>Nodejs is a javascript engine that is used to create web applications. Whereas, MongoDB is a database engine that is used to store, filter data. 
                         </p>

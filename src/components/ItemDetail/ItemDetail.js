@@ -8,7 +8,7 @@ const ItemDetail = () => {
     const [details, setDetails] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/item/${id}`
+        const url = `https://serene-refuge-96903.herokuapp.com/item/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setDetails(data))
@@ -29,7 +29,7 @@ const ItemDetail = () => {
         setDetails(details);
 
         // send data to server 
-        const url = `http://localhost:5000/item/${id}`
+        const url = `https://serene-refuge-96903.herokuapp.com/item/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -59,7 +59,7 @@ const ItemDetail = () => {
         setDetails(details);
 
         // send data to server 
-        const url = `http://localhost:5000/item/${id}`
+        const url = `https://serene-refuge-96903.herokuapp.com/item/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {

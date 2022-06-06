@@ -8,7 +8,7 @@ const ManageInventoryItem = (props) => {
     const handleDeleteBtn= _id => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/item/${_id}`
+            const url = `https://serene-refuge-96903.herokuapp.com/item/${_id}`
         fetch(url, {
               method: 'DELETE', 
           })
